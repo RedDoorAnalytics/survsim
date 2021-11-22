@@ -1,2 +1,2 @@
 # survsim
-Simulating simple and complex single event, competing risks and multistate survival data in Stata
+Simulating time-to-event data from parametric distributions, custom distributions, competing risk models and general multi-state models
