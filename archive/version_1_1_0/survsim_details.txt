@@ -1,0 +1,14 @@
+TITLE: `SURVSIM' : module to simulate survival times from a variety of Weibull based
+distributions.
+
+DESCRIPTION/AUTHOR: survsim simulates survival times from Weibull or Gompertz parametric distributions. 
+Survival times can be generated from a single parametric distribution, a 2-component mixture model, and 
+from the all-cause distribution of cause-specific hazards for competing risks. Baseline covariates can 
+be included in all models. Non-proportional hazards can be included with all models except a mixture model; 
+under a Weibull model covariates are interacted with log time, under a Gompertz model covariates are 
+interacted with time.
+
+Author: Michael J. Crowther, University of Leicester
+Support: email mjc76@le.ac.uk
+
+Requires: Stata version 11.0

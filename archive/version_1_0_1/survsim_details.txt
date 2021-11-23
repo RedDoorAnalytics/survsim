@@ -1,0 +1,12 @@
+TITLE: `SURVSIM' : module to simulate survival times from a variety of Weibull based
+distributions.
+
+DESCRIPTION/AUTHOR: survsim simulates survival times from a variety of Weibull based 
+distributions. Survival times can be generated from a standard Weibull distribution, 
+a 2-component mixture Weibull distribution, and Weibull based cause-specific hazards 
+for competing risks. Baseline covariates can be included.
+
+Author: Michael J. Crowther, University of Leicester
+Support: email mjc76@le.ac.uk
+
+Requires: Stata version 11.0

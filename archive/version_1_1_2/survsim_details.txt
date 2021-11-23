@@ -1,0 +1,11 @@
+TITLE: `SURVSIM' : module to simulate complex survival data.
+
+DESCRIPTION/AUTHOR: survsim simulates survival times from parametric distributions. Distributions include the exponential, Gompertz and Weibull. Newton-Raphson 
+iterations are used to generate survival times under a 2-component mixture model or cause-specific hazards model for competing risks. Non-proportional hazards 
+can be included with all models except a mixture model; under an exponential or Weibull model covariates are interacted with log time, under a Gompertz 
+model covariates are interacted with time. Baseline covariates can be included in all models.
+
+Author: Michael J. Crowther, University of Leicester
+Support: email mjc76@le.ac.uk
+
+Requires: Stata version 11.0
