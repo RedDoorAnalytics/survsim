@@ -1,0 +1,15 @@
+v 3
+d SURVSIM: simulating survival data
+d Author: Michael J. Crowther
+d Distribution-Date: 20211013
+f survsim/survsim.ado
+f survsim/survsim_user.ado
+f survsim/survsim_user_core.ado
+f survsim/survsim_model.ado
+f survsim/survsim_msm.ado
+f survsim/survsim.sthlp
+f survsim/survsim_parametric.sthlp
+f survsim/survsim_user.sthlp
+f survsim/survsim_model.sthlp
+f survsim/survsim_msm.sthlp
+e
