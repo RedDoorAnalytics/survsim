@@ -1,0 +1,3 @@
+v 3
+d Stata package for simulating survival data
+p survsim
