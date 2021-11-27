@@ -15,7 +15,7 @@ ssc install survsim
 To install directly from this GitHub repository, use:
 
 ```{stata}
-net install survsim, from("https://raw.githubusercontent.com/RedDoorAnalytics/survsim/master/")
+net install survsim, from("https://raw.githubusercontent.com/RedDoorAnalytics/survsim/main/")
 ```
 
 # References
