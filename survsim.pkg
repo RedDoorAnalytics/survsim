@@ -12,4 +12,6 @@ f survsim/survsim_parametric.sthlp
 f survsim/survsim_user.sthlp
 f survsim/survsim_model.sthlp
 f survsim/survsim_msm.sthlp
+f survsim/survsim_msm_mataf.mata
+f survsim/survsim_msm_mataf_total.mata
 e
