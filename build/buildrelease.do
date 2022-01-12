@@ -17,17 +17,16 @@ local sscbuild = 1
 
 if `sscbuild' {											
 	
-	//build for SSC -> current version up is 4.0.3
+	//build for SSC -> current version up is 4.0.6
 	
-	local sscversion 4_0_6
+	local sscversion 4_0_8
 	cap mkdir ./ssc/version_`sscversion'
 	local fdir /Users/Michael/Documents/survsim/ssc/version_`sscversion'/
 }
 else {													
 	
-	//build for website -> current version up is 4.0.5
-	
-	local fdir /Users/Michael/Documents/website/static/code/survsim/
+// 	build for website -> current version up is 4.0.5
+// 	local fdir /Users/Michael/Documents/website/static/code/survsim/
 }
 
 //=======================================================================================================================//
@@ -50,6 +49,8 @@ else {
 	copy ./survsim/survsim_user_core.ado `fdir', replace
 	copy ./survsim/survsim_model.ado `fdir', replace
 	copy ./survsim/survsim_msm.ado `fdir', replace
+        copy ./survsim/survsim_msm_mataf.mata
+        copy ./survsim/survsim_msm_mataf_total.mata
 	
 	//help files
 	copy ./survsim/survsim.sthlp `fdir', replace

@@ -1,7 +1,8 @@
-*! version 4.0.7 02dec2021 MJC
+*! version 4.0.8 14jan2022 MJC
 
 /*
 History
+12jan2022 version 4.0.8 - build error; now fixed
 02dec2021 version 4.0.7 - bug fix with msm simulation, would occur if directory of installed files had a space in it
                         - missing .mata files in pkg file
 13oct2021 version 4.0.6 - bug fix with varnames in chazard() or logchazard() not parsed correctly with survsim user; now fixed
