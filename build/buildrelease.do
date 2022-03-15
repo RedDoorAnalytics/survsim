@@ -8,8 +8,8 @@
 
 
 //local drive Z:/
-local drive /Users/Michael/Documents
-cd `drive'/survsim/
+local drive /Users/Michael/Documents/reddooranalytics/products/survsim
+cd `drive'
 
 local sscbuild = 1
 
@@ -17,11 +17,11 @@ local sscbuild = 1
 
 if `sscbuild' {											
 	
-	//build for SSC -> current version up is 4.0.6
+	//build for SSC -> current version up is 4.0.9
 	
-	local sscversion 4_0_8
+	local sscversion 4_0_9
 	cap mkdir ./ssc/version_`sscversion'
-	local fdir /Users/Michael/Documents/survsim/ssc/version_`sscversion'/
+	local fdir `drive'/ssc/version_`sscversion'/
 }
 else {													
 	
@@ -49,8 +49,8 @@ else {
 	copy ./survsim/survsim_user_core.ado `fdir', replace
 	copy ./survsim/survsim_model.ado `fdir', replace
 	copy ./survsim/survsim_msm.ado `fdir', replace
-        copy ./survsim/survsim_msm_mataf.mata
-        copy ./survsim/survsim_msm_mataf_total.mata
+        copy ./survsim/survsim_msm_mataf.mata `fdir', replace
+        copy ./survsim/survsim_msm_mataf_total.mata `fdir', replace
 	
 	//help files
 	copy ./survsim/survsim.sthlp `fdir', replace
