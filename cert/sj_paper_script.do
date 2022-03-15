@@ -1,15 +1,15 @@
 
 //local drive Z:\
-local drive /Users/Michael/Documents
+local drive /Users/Michael/Documents/reddooranalytics/products
 
 //merlin and galahad
-cd "`drive'/merlin"
-adopath ++ "`drive'/merlin"
-adopath ++ "`drive'/merlin/merlin"
-adopath ++ "`drive'/merlin/galahad/galahad"
-clear all
-do ./build/buildmlib.do
-mata mata clear
+// cd "`drive'/merlin"
+// adopath ++ "`drive'/merlin"
+// adopath ++ "`drive'/merlin/merlin"
+// adopath ++ "`drive'/merlin/galahad/galahad"
+// clear all
+// do ./build/buildmlib.do
+// mata mata clear
 
 //survsim
 adopath ++ "`drive'/survsim/survsim"
