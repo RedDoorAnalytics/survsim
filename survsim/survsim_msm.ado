@@ -477,7 +477,7 @@ mata:
 
 void survsim_msm(`PC' Phfs, `PC' Ptotalhfs)
 {
-	N 			= st_nobs()
+	N 		= st_nobs()
 	tmat 		= st_matrix(st_local("transmatrix"))
 	Nstates 	= rows(tmat)
 	Nnextstates	= rownonmissing(tmat)
@@ -714,7 +714,7 @@ void check_transmatrix()
 	row = 1
 	rtmat = rows(tmat)
 	trans = 1
-	while (row<rtmat) {
+	while (row<=rtmat) {
 		for (i=1;i<=rtmat;i++) {
 			if (sum(tmat:==tmat[row,i])>1 & tmat[row,i]!=.) {
 				errprintf("Elements of transmatrix() are not unique\n")
@@ -733,13 +733,13 @@ void check_transmatrix()
 
 //entirely based on Ben Jann's mm_root() from moremata
 `RC' survsim_mm_root(	transmorphic x,      					/// bj: will be replaced by solution
-						pointer(real matrix function) scalar f,	/// Address of the function whose zero will be sought for
-						`RC' ax,      							/// Root will be sought for within a range [ax,bx]
-						`RC' bx,      							///
-						real scalar tol,   						/// Acceptable tolerance for the root value (default 0)
-						real scalar maxit, 						/// maximum # of iterations (default: 1000)
-						`RC' index,| 							/// 
-						`opts')									//  additional args to pass on to f
+                        pointer(real matrix function) scalar f,	/// Address of the function whose zero will be sought for
+                        `RC' ax,      							/// Root will be sought for within a range [ax,bx]
+                        `RC' bx,      							///
+                        real scalar tol,   						/// Acceptable tolerance for the root value (default 0)
+                        real scalar maxit, 						/// maximum # of iterations (default: 1000)
+                        `RC' index,| 							/// 
+                        `opts')									//  additional args to pass on to f
 {
     transmorphic  fs            // setup for f
     `RC'   a, b, c       		// Abscissae, descr. see above
