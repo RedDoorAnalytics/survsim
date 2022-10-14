@@ -17,17 +17,13 @@ local sscbuild = 1
 
 if `sscbuild' {											
 	
-	//build for SSC -> current version up is 4.0.9
+	//build for SSC -> current version up is 4.0.10
 	
-	local sscversion 4_0_9
+	local sscversion 4_0_10
 	cap mkdir ./ssc/version_`sscversion'
 	local fdir `drive'/ssc/version_`sscversion'/
 }
-else {													
-	
-// 	build for website -> current version up is 4.0.5
-// 	local fdir /Users/Michael/Documents/website/static/code/survsim/
-}
+
 
 //=======================================================================================================================//
 
