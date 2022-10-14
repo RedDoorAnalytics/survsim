@@ -104,7 +104,7 @@ program define survsim
 				exit 198
 			}
 			
-			cap confirm number `maxtime'
+			cap n confirm number `maxtime'
 			if _rc {
 				cap confirm numeric variable `maxtime'
 				if _rc {
@@ -154,7 +154,7 @@ program define survsim
 		syntax , [`opts1' *]
 		
 		if "`model'"!="" {
-			capture survsim_model `newvars', 	`model' 		///
+			capture n survsim_model `newvars', 	`model' 		///
 												`maxtopt'		//
 			local rc = c(rc)
 			if `rc' {
@@ -181,19 +181,19 @@ program define survsim
 		local useropt "`loghazard'`hazard'`logchazard'`chazard'`mixture'"
 		
 		if "`useropt'"!="" {
-			capture survsim_user `newvars', 	`useropt' 		///
-												`nodes'			///
-												`maxtopt' 		///
-												`ltopt'			///
-												`covariates'	///
-												`tde'			///
-												`tdefunction'	///
-												`distribution'	///	-for mixture-
-												`lambdas'		///
-												`gammas'		///
-												`pmix'			///
-												`marginal'		//
-            local rc = c(rc)
+			capture n survsim_user `newvars', `useropt' 	///
+                                                `nodes'			///
+                                                `maxtopt' 		///
+                                                `ltopt'			///
+                                                `covariates'	        ///
+                                                `tde'			///
+                                                `tdefunction'	        ///
+                                                `distribution'	        ///	-for mixture-
+                                                `lambdas'		///
+                                                `gammas'		///
+                                                `pmix'			///
+                                                `marginal'		//
+                        local rc = c(rc)
 			if `rc' {
 				cap drop _survsim_rc
 				cap drop `stime'
@@ -217,17 +217,17 @@ program define survsim
 		
 		if "`hazard1'"!="" {
 		
-			capture program drop survsim_msm			// refreshes Mata functions
+			capture program drop survsim_msm	// refreshes Mata functions
 			
-			survsim_msm `newvars', 		`transmatrix'	///
-										`hazard1'		///
-										`hazard2'		///
-										`maxtopt' 		///
-										`ltopt'			///
-										`startstate'	///
-										`nodes'			///
-										`options' 		//
-			exit
+			survsim_msm `newvars', 	`transmatrix'	        ///
+                                                `hazard1'		///
+                                                `hazard2'		///
+                                                `maxtopt' 		///
+                                                `ltopt'			///
+                                                `startstate'	        ///
+                                                `nodes'			///
+                                                `options' 		//
+                        exit
 			
 		}
 		
